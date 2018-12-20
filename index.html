@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>App</title>
+       <link rel="stylesheet" href="style.css"/>
+       <script src="./lib/jquery.js"></script>
+       <script src="./lib/handlebars.js"></script>
+       <script data-main="./app/main" src="./lib/require.js"></script>
+ 
+   </head>
+   
+   <body>
+       <div class="main-div">
+            <h3>Search & select a city</h3>
+            <input type="search" placeholder="Search a city" name="search" id="search-box" class="search-box-class" />
+            <div class="search-result"></div>
+       </div>
+   </body>
+
+   <script id="template-search" type="text/x-handlebars-template">
+        <table class='search-suggestion'>
+            <th>Suggestions</th>
+            {{#each result}}
+                <td class="list-item">{{this}}</td>
+            {{/each}}
+        </table>
+    </script> 
+
+</html>
